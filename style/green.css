@@ -1,0 +1,18 @@
+.table-content {
+    width: 155pt;
+    border-right: 1pt solid black;
+    border-bottom: 1pt solid black;
+    border-left: 1pt solid black;
+    border-image: initial;
+    border-top: none;
+    padding: 0cm 5.4pt;
+    height: 14.25pt;
+    vertical-align: top;
+}
+
+.start-time {
+    font-size: 22px;   /* try 18px / 22px / 24px */
+    color: green;
+    text-align: center;
+}
+

@@ -1,0 +1,106 @@
+/* ================= FACILITIES GRID ================= */
+
+#facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  padding: 30px 5%;
+}
+
+/* Individual facility box */
+.wm {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 15px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect (keeps your hvr-grow working) */
+.wm:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(52, 149, 187, 0.15);
+}
+
+/* Images inside boxes */
+.wm img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+/* Titles */
+.wm h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.wm h3 a {
+  text-decoration: none;
+  color: #005e80;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE FIXES ================= */
+
+/* Large desktops (keep 5–6 in a row, NOT too small) */
+@media (min-width: 1200px) {
+  #facilities {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #facilities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wm img {
+    width: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #facilities {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .wm {
+    padding: 18px 10px;
+  }
+
+  .wm img {
+    width: 70px;
+  }
+
+  .wm h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  #facilities {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= FOOTER MOBILE SAFETY ================= */
+
+footer ul {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer ul li {
+  margin: 6px 10px;
+}
+
+#c111 {
+  justify-content: center !important;
+  text-align: center;
+}
